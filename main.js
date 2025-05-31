@@ -32,7 +32,7 @@ function mostrarHorariosDisponibles() {
   }
 }
 
-// Asigna turn
+// Asigna turno al usuario
 function asignarTurno() {
   const medicoElegido = parseInt(mostrarMedicos());
 
