@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulador de Turnos Médicos</title>
-</head>
-<body>
-  <h1>Simulador de Turnos Médicos</h1>
-  <p>
-    Este simulador permite al paciente seleccionar un médico y asignarse un turno disponible.
-  </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vinoteca del Sur</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h1>Vinoteca del Sur</h1>
+      <nav class="menu">
+        <button id="menu-toggle">☰ Menú</button>
+        <ul id="menu-options" class="hidden">
+          <li><a href="#" data-filter="todos">Inicio</a></li>
+          <li><a href="#" data-filter="vino">Vinos</a></li>
+          <li><a href="#" data-filter="espumante">Espumantes</a></li>
+          <li><a href="#" data-filter="licor">Licores</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <script src="/main.js"></script>
-</body>
+    <main>
+      <section class="productos" id="contenedor-productos"></section>
+    </main>
+
+    <button id="ver-carrito" class="carrito-btn">🛒</button>
+
+    <aside id="carrito" class="carrito">
+      <h2>Tu carrito</h2>
+      <div id="items-carrito"></div>
+      <div id="monto-total">Total: $0</div>
+      <button id="finalizar-compra">Finalizar compra</button>
+    </aside>
+
+    <script src="main.js"></script>
+  </body>
 </html>
+
