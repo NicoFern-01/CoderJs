@@ -37,6 +37,14 @@ finalizarCompra.addEventListener("click", () => {
   carrito = [];
   actualizarCarrito();
   carritoPanel.classList.remove("mostrar");
+
+  //Alerta SweetAlert
+  Swal.fire({
+    title: '¡Gracias por tu compra!',
+    text: 'Tu pedido fue procesado correctamente.',
+    icon: 'success',
+    confirmButtonText: 'Aceptar'
+  });
 });
 
 menuOptions.querySelectorAll("a").forEach((link) => {
