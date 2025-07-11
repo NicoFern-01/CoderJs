@@ -174,4 +174,41 @@ body {
   margin-top: 1rem;
   color: #003366;
 }
+.carrito-icono {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3478f6;
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.contador {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
 

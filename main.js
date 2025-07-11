@@ -159,6 +159,8 @@ const montoTotal = document.getElementById("monto-total");
 const finalizarCompra = document.getElementById("finalizar-compra");
 const menuToggle = document.getElementById("menu-toggle");
 const menuOptions = document.getElementById("menu-options");
+const contadorCarrito = document.getElementById("contador-carrito");
+
 
 let carrito = JSON.parse(localStorage.getItem("carrito_vinoteca")) || [];
 
@@ -247,6 +249,7 @@ function actualizarCarrito() {
   const total = carrito.reduce((acc, el) => acc + el.precio, 0);
   montoTotal.innerText = `Total: $${total}`;
   localStorage.setItem("carrito_vinoteca", JSON.stringify(carrito));
+  actualizarContadorCarrito(); // ✅ NUEVO
   agregarEventosQuitar();
 }
 function agregarEventosQuitar() {
@@ -259,8 +262,13 @@ function agregarEventosQuitar() {
     });
   });
 }
+function actualizarContadorCarrito() {
+  const cantidad = carrito.length;
+  contadorCarrito.innerText = cantidad >= 0 ? cantidad : 0;
+}
 
 
 mostrarProductos(productos);
 actualizarCarrito();
+actualizarContadorCarrito();
 
